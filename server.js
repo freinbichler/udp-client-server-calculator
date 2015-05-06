@@ -14,7 +14,6 @@ server.on('listening', function() {
 });
 
 server.on('message', function(message, remote) {
-  console.log(message[2]);
   var result = calculate[message[2]](message[0], message[1]);
   console.log(remote.address + ':' + remote.port + ' - ' + result);
 });

@@ -11,10 +11,11 @@ var encodeOperand = {
   '+': 0,
   '-': 1,
   '*': 2,
+  'x': 2,
   '/': 3
 }
 
-var calc = [12, 2, encodeOperand['/']];
+var calc = [process.argv[2], process.argv[4], encodeOperand[process.argv[3]]];
 var message = new Buffer(calc);
 
 var client = dgram.createSocket('udp4');
